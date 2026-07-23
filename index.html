@@ -35,7 +35,7 @@
       color: #d32f2f;
       font-size: 1.35rem;
       font-weight: bold;
-      margin-bottom: 20px;
+      margin-bottom: 16px;
       font-family: system-ui, -apple-system, sans-serif;
     }
 
@@ -45,7 +45,7 @@
       line-height: 1.6;
       font-size: 0.95rem;
       color: #4a4a4a;
-      margin-bottom: 20px;
+      margin-bottom: 16px;
     }
 
     .legend-text {
@@ -68,25 +68,57 @@
       margin: 16px auto;
     }
 
-    /* Video / Fotos en el medio */
+    /* Video Principal */
     .video-container {
       width: 100%;
       border-radius: 18px;
       overflow: hidden;
       background-color: #000000;
       box-shadow: 0 6px 18px rgba(0,0,0,0.12);
-      margin-bottom: 20px;
+      margin-bottom: 16px;
     }
 
-    .video-container video, 
-    .video-container img {
+    .video-container video {
       width: 100%;
       height: auto;
       display: block;
       object-fit: cover;
     }
 
-    /* Insignia de los 7 meses y fecha abajo */
+    /* Carrusel Deslizable para tus Fotos */
+    .carousel-container {
+      display: flex;
+      gap: 12px;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      padding-bottom: 8px;
+      margin-bottom: 20px;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    /* Ocultar barra de scroll en móviles */
+    .carousel-container::-webkit-scrollbar {
+      display: none;
+    }
+
+    .carousel-item {
+      flex: 0 0 85%;
+      scroll-snap-align: center;
+      border-radius: 16px;
+      overflow: hidden;
+      background-color: #000000;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      aspect-ratio: 9 / 16;
+    }
+
+    .carousel-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    /* Insignia y Fecha */
     .badge-months {
       display: inline-block;
       background-color: #fff5f5;
@@ -126,7 +158,7 @@
       Un mensaje especial en video 🎬
     </div>
 
-    <!-- Leyenda japonesa arriba -->
+    <!-- Leyenda japonesa (ARRIBA) -->
     <div class="legend-container">
       <p class="legend-text">
         Una leyenda japonesa...<br>
@@ -140,7 +172,7 @@
 
     <div class="red-thread-line"></div>
 
-    <!-- Contenedor para el video o imagen -->
+    <!-- Video Principal -->
     <div class="video-container">
       <video 
         src="tu-video.mp4" 
@@ -149,11 +181,28 @@
         muted 
         playsinline 
         webkit-playsinline>
-        <img src="tu-foto.jpg" alt="Foto juntos">
       </video>
     </div>
 
-    <!-- Celebración y fecha abajo -->
+    <!-- Carrusel con tus 15 Fotos -->
+    <div class="carousel-container">
+      <div class="carousel-item"><img src="foto1.jpg" alt="Foto 1"></div>
+      <div class="carousel-item"><img src="foto2.jpg" alt="Foto 2"></div>
+      <div class="carousel-item"><img src="foto3.jpg" alt="Foto 3"></div>
+      <div class="carousel-item"><img src="foto4.jpg" alt="Foto 4"></div>
+      <div class="carousel-item"><img src="foto5.jpg" alt="Foto 5"></div>
+      <div class="carousel-item"><img src="foto6.jpg" alt="Foto 6"></div>
+      <div class="carousel-item"><img src="foto7.jpeg" alt="Foto 7"></div> <!-- Nota la extensión .jpeg -->
+      <div class="carousel-item"><img src="foto8.jpg" alt="Foto 8"></div>
+      <div class="carousel-item"><img src="foto10.jpg" alt="Foto 10"></div>
+      <div class="carousel-item"><img src="foto11.jpg" alt="Foto 11"></div>
+      <div class="carousel-item"><img src="foto12.jpg" alt="Foto 12"></div>
+      <div class="carousel-item"><img src="foto13.jpg" alt="Foto 13"></div>
+      <div class="carousel-item"><img src="foto14.jpg" alt="Foto 14"></div>
+      <div class="carousel-item"><img src="foto15.jpg" alt="Foto 15"></div>
+    </div>
+
+    <!-- Celebración y Fecha (ABAJO) -->
     <div class="badge-months">
       ✨ 7 Meses Juntos ✨
     </div>
