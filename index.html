@@ -68,11 +68,11 @@
       margin: 16px auto;
     }
 
-    /* Contenedor del Video tipo GIF (Google Drive) */
+    /* Contenedor del Video de Google Drive */
     .drive-gif-container {
       position: relative;
       width: 100%;
-      aspect-ratio: 9 / 16; /* Mantiene la proporción vertical limpia */
+      aspect-ratio: 9 / 16;
       border-radius: 18px;
       overflow: hidden;
       background-color: #000000;
@@ -84,7 +84,7 @@
       width: 100%;
       height: 100%;
       border: none;
-      pointer-events: none; /* Bloquea clics para que actúe estrictamente como un GIF */
+      /* Se eliminó pointer-events: none para permitir tocar el Play */
     }
 
     /* Carrusel Deslizable para las Fotos */
@@ -156,7 +156,7 @@
 
   <div class="card">
     <div class="title">
-      Un mensaje especial para la mujer de mis sueños
+      Un mensaje especial para la mujer de mis sueños ❤️
     </div>
 
     <!-- Leyenda japonesa -->
@@ -173,11 +173,12 @@
 
     <div class="red-thread-line"></div>
 
-    <!-- Video embed desde Google Drive actuando como GIF -->
+    <!-- Video embed desde Google Drive -->
     <div class="drive-gif-container">
       <iframe 
         src="https://drive.google.com/file/d/1qN1bbP8FdVnKgGw_GLsZpRgBXuhTljBF/preview" 
-        allow="autoplay">
+        allow="autoplay; encrypted-media"
+        allowfullscreen>
       </iframe>
     </div>
 
@@ -189,7 +190,7 @@
       <div class="carousel-item"><img src="foto4.jpg" alt="Foto 4"></div>
       <div class="carousel-item"><img src="foto5.jpg" alt="Foto 5"></div>
       <div class="carousel-item"><img src="foto6.jpg" alt="Foto 6"></div>
-    
+
       <div class="carousel-item"><img src="foto8.jpg" alt="Foto 8"></div>
       <div class="carousel-item"><img src="foto9.jpg" alt="Foto 9"></div>
       <div class="carousel-item"><img src="foto10.jpg" alt="Foto 10"></div>
