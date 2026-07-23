@@ -3,58 +3,119 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Un mensaje especial</title>
+  <title>Nuestros 7 Meses ❤️</title>
   <style>
-    /* Estilos básicos de centrado y presentación */
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
-      padding: 20px;
-      background-color: #f5f5f5;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      padding: 24px 16px;
+      background-color: #fcf8f8;
+      font-family: 'Georgia', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, serif;
       display: flex;
       justify-content: center;
       align-items: center;
       min-height: 100vh;
+      color: #333333;
     }
 
     .card {
       background: #ffffff;
-      padding: 24px;
-      border-radius: 20px;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-      max-width: 360px;
+      padding: 28px 20px;
+      border-radius: 24px;
+      box-shadow: 0 10px 30px rgba(229, 62, 62, 0.08);
+      max-width: 380px;
       width: 100%;
       text-align: center;
     }
 
     .title {
-      color: #e53e3e;
-      font-size: 1.3rem;
+      color: #d32f2f;
+      font-size: 1.35rem;
       font-weight: bold;
-      margin-bottom: 12px;
+      margin-bottom: 20px;
+      font-family: system-ui, -apple-system, sans-serif;
     }
 
-    /* Contenedor del video con esquinas redondeadas */
+    /* Leyenda en la parte superior */
+    .legend-container {
+      padding: 0 10px;
+      line-height: 1.6;
+      font-size: 0.95rem;
+      color: #4a4a4a;
+      margin-bottom: 20px;
+    }
+
+    .legend-text {
+      margin: 0;
+    }
+
+    .highlight-ti {
+      display: block;
+      font-size: 1.25rem;
+      font-weight: bold;
+      color: #d32f2f;
+      margin-top: 6px;
+      letter-spacing: 2px;
+    }
+
+    .red-thread-line {
+      width: 50px;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, #e53e3e, transparent);
+      margin: 16px auto;
+    }
+
+    /* Video / Fotos en el medio */
     .video-container {
       width: 100%;
-      border-radius: 16px;
+      border-radius: 18px;
       overflow: hidden;
-      background-color: #000;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      background-color: #000000;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+      margin-bottom: 20px;
     }
 
-    /* Ajuste del video */
-    .video-container video {
+    .video-container video, 
+    .video-container img {
       width: 100%;
       height: auto;
       display: block;
       object-fit: cover;
     }
 
-    .footer-text {
-      margin-top: 16px;
+    /* Insignia de los 7 meses y fecha abajo */
+    .badge-months {
+      display: inline-block;
+      background-color: #fff5f5;
+      color: #e53e3e;
+      font-weight: bold;
       font-size: 0.85rem;
-      color: #718096;
+      padding: 6px 14px;
+      border-radius: 12px;
+      border: 1px solid #fed7d7;
+      margin-bottom: 8px;
+      font-family: system-ui, -apple-system, sans-serif;
+    }
+
+    .date {
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: #666666;
+      margin-bottom: 18px;
+      letter-spacing: 1px;
+    }
+
+    .footer-text {
+      font-size: 0.8rem;
+      color: #999999;
+      font-family: system-ui, -apple-system, sans-serif;
+    }
+
+    .footer-text span {
+      color: #e53e3e;
     }
   </style>
 </head>
@@ -65,12 +126,22 @@
       Un mensaje especial en video 🎬
     </div>
 
+    <!-- Leyenda japonesa arriba -->
+    <div class="legend-container">
+      <p class="legend-text">
+        Una leyenda japonesa...<br>
+        Dice que dos personas destinadas a encontrarse están unidas por un hilo rojo invisible.<br><br>
+        Puede estirarse, enredarse o perderse entre los caminos de la vida...<br>
+        pero nunca se rompe.<br><br>
+        Me alegra que mi hilo rojo me haya llevado hasta
+        <span class="highlight-ti">TI</span>
+      </p>
+    </div>
+
+    <div class="red-thread-line"></div>
+
+    <!-- Contenedor para el video o imagen -->
     <div class="video-container">
-      <!-- 
-        - playsinline y webkit-playsinline: evitan la reproducción automática a pantalla completa en iOS.
-        - autoplay, loop y muted: necesarios para que los navegadores móviles permitan el auto-play sin interacción del usuario.
-        - Sin el atributo "controls" para no mostrar los botones por encima del video.
-      -->
       <video 
         src="tu-video.mp4" 
         autoplay 
@@ -78,12 +149,21 @@
         muted 
         playsinline 
         webkit-playsinline>
-        Tu navegador no soporta la reproducción de video.
+        <img src="tu-foto.jpg" alt="Foto juntos">
       </video>
     </div>
 
+    <!-- Celebración y fecha abajo -->
+    <div class="badge-months">
+      ✨ 7 Meses Juntos ✨
+    </div>
+
+    <div class="date">
+      24/12/2025
+    </div>
+
     <div class="footer-text">
-      Hecho con ❤️ especialmente para ti.
+      Hecho con <span>❤️</span> especialmente para ti.
     </div>
   </div>
 
