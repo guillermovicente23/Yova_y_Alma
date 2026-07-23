@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Un Espacio Especial</title>
+  <style>
+    :root {
+      --bg-color: #fdf6f6;
+      --card-bg: #ffffff;
+      --accent-color: #e63946;
+      --text-color: #2b2d42;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      margin: 0;
+      padding: 20px;
+    }
+
+    header {
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      color: var(--accent-color);
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 1.1rem;
+      color: #666;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    /* Galería de Fotos */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 15px;
+      margin-bottom: 50px;
+    }
+
+    .gallery img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .gallery img:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+    }
+
+    /* Sección de Video */
+    .video-section {
+      text-align: center;
+      background-color: var(--card-bg);
+      padding: 30px;
+      border-radius: 16px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+      margin-bottom: 50px;
+    }
+
+    .video-section h2 {
+      color: var(--accent-color);
+      margin-bottom: 20px;
+    }
+
+    .video-wrapper {
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    video {
+      width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      color: #888;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <header>
+      <h1>Para Alguien Muy Especial ✨</h1>
+      <p>Un pequeño rincón dedicado a recordar momentos inolvidables.</p>
+    </header>
+
+    <!-- Galería de 15 Fotos -->
+    <section class="gallery">
+      <img src="foto1.jpg" alt="Foto 1">
+      <img src="foto2.jpg" alt="Foto 2">
+      <img src="foto3.jpg" alt="Foto 3">
+      <img src="foto4.jpg" alt="Foto 4">
+      <img src="foto5.jpg" alt="Foto 5">
+      <img src="foto6.jpg" alt="Foto 6">
+      <img src="foto7.jpg" alt="Foto 7">
+      <img src="foto8.jpg" alt="Foto 8">
+      <img src="foto9.jpg" alt="Foto 9">
+      <img src="foto10.jpg" alt="Foto 10">
+      <img src="foto11.jpg" alt="Foto 11">
+      <img src="foto12.jpg" alt="Foto 12">
+      <img src="foto13.jpg" alt="Foto 13">
+      <img src="foto14.jpg" alt="Foto 14">
+      <img src="foto15.jpg" alt="Foto 15">
+    </section>
+
+    <!-- Sección del Video -->
+    <section class="video-section">
+      <h2>Un mensaje especial en video 🎥</h2>
+      <div class="video-wrapper">
+        <video controls>
+          <source src="video.mp4" type="video/mp4">
+          Tu navegador no soporta el formato de video.
+        </video>
+      </div>
+    </section>
+
+    <footer>
+      <p>Hecho con ❤️ especialmente para ti.</p>
+    </footer>
+  </div>
+
+</body>
+</html>
