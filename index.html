@@ -39,7 +39,7 @@
       font-family: system-ui, -apple-system, sans-serif;
     }
 
-    /* Leyenda en la parte superior */
+    /* Leyenda japonesa (Arriba) */
     .legend-container {
       padding: 0 10px;
       line-height: 1.6;
@@ -68,9 +68,11 @@
       margin: 16px auto;
     }
 
-    /* Video Principal con video.mp4 */
-    .video-container {
+    /* Contenedor del Video tipo GIF (Google Drive) */
+    .drive-gif-container {
+      position: relative;
       width: 100%;
+      aspect-ratio: 9 / 16; /* Mantiene la proporción vertical limpia */
       border-radius: 18px;
       overflow: hidden;
       background-color: #000000;
@@ -78,11 +80,11 @@
       margin-bottom: 16px;
     }
 
-    .video-container video {
+    .drive-gif-container iframe {
       width: 100%;
-      height: auto;
-      display: block;
-      object-fit: cover;
+      height: 100%;
+      border: none;
+      pointer-events: none; /* Bloquea clics para que actúe estrictamente como un GIF */
     }
 
     /* Carrusel Deslizable para las Fotos */
@@ -117,7 +119,7 @@
       display: block;
     }
 
-    /* Insignia y Fecha */
+    /* Insignia y Fecha (Abajo) */
     .badge-months {
       display: inline-block;
       background-color: #fff5f5;
@@ -154,10 +156,10 @@
 
   <div class="card">
     <div class="title">
-      Un mensaje especial en video 🎬
+      Un mensaje especial para la mujer de mis sueños
     </div>
 
-    <!-- Leyenda japonesa (ARRIBA) -->
+    <!-- Leyenda japonesa -->
     <div class="legend-container">
       <p class="legend-text">
         Una leyenda japonesa...<br>
@@ -171,19 +173,15 @@
 
     <div class="red-thread-line"></div>
 
-    <!-- Video Principal enlazado a video.mp4 -->
-    <div class="video-container">
-      <video 
-        src="video.mp4" 
-        autoplay 
-        loop 
-        muted 
-        playsinline 
-        webkit-playsinline>
-      </video>
+    <!-- Video embed desde Google Drive actuando como GIF -->
+    <div class="drive-gif-container">
+      <iframe 
+        src="https://drive.google.com/file/d/1qN1bbP8FdVnKgGw_GLsZpRgBXuhTljBF/preview" 
+        allow="autoplay">
+      </iframe>
     </div>
 
-    <!-- Carrusel con todas tus fotos (de la 1 a la 15) -->
+    <!-- Carrusel de fotos -->
     <div class="carousel-container">
       <div class="carousel-item"><img src="foto1.jpg" alt="Foto 1"></div>
       <div class="carousel-item"><img src="foto2.jpg" alt="Foto 2"></div>
@@ -191,6 +189,8 @@
       <div class="carousel-item"><img src="foto4.jpg" alt="Foto 4"></div>
       <div class="carousel-item"><img src="foto5.jpg" alt="Foto 5"></div>
       <div class="carousel-item"><img src="foto6.jpg" alt="Foto 6"></div>
+      <div class="carousel-item"><img src="foto7.jpeg" alt="Foto 7"></div>
+      <div class="carousel-item"><img src="foto8.jpg" alt="Foto 8"></div>
       <div class="carousel-item"><img src="foto9.jpg" alt="Foto 9"></div>
       <div class="carousel-item"><img src="foto10.jpg" alt="Foto 10"></div>
       <div class="carousel-item"><img src="foto11.jpg" alt="Foto 11"></div>
@@ -200,7 +200,7 @@
       <div class="carousel-item"><img src="foto15.jpg" alt="Foto 15"></div>
     </div>
 
-    <!-- Celebración y Fecha (ABAJO) -->
+    <!-- Celebración y Fecha -->
     <div class="badge-months">
       ✨ 7 Meses Juntos ✨
     </div>
