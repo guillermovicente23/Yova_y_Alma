@@ -113,7 +113,10 @@
       <img src="foto4.jpg" alt="Foto 4">
       <img src="foto5.jpg" alt="Foto 5">
       <img src="foto6.jpg" alt="Foto 6">
-      <img src="foto7.jpg" alt="Foto 7">
+      
+      <!-- Foto 7 corregida para intentar .jpg o .jpeg automáticamente -->
+      <img src="foto7.jpg" onerror="this.onerror=null; this.src='foto7.jpeg';" alt="Foto 7">
+      
       <img src="foto8.jpg" alt="Foto 8">
       <img src="foto9.jpg" alt="Foto 9">
       <img src="foto10.jpg" alt="Foto 10">
@@ -124,11 +127,11 @@
       <img src="foto15.jpg" alt="Foto 15">
     </section>
 
-    <!-- Sección del Video -->
+    <!-- Sección del Video (Opción 1 optimizada) -->
     <section class="video-section">
       <h2>Un mensaje especial en video 🎥</h2>
       <div class="video-wrapper">
-        <video controls>
+        <video controls preload="metadata" playsinline>
           <source src="video.mp4" type="video/mp4">
           Tu navegador no soporta el formato de video.
         </video>
